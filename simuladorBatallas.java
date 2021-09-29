@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public class simuladorBatallas {
     private int turno = 0;
-    private int cantidadJugadores;
-    private int cantidadEnemigos;
 
     private ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
     private ArrayList<Enemigo> enemigos = new ArrayList<Enemigo>();
