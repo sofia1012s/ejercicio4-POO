@@ -19,16 +19,6 @@ public class Combatiente {
         return tomarTurno;
     }
 
-    public int tomarDano(Combatiente combatiente) {
-        puntosVida = puntosVida - combatiente.getPoderAtaque();
-        return puntosVida;
-    }
-
-    public void atacar(Combatiente combatiente) {
-        int puntosVida = combatiente.getPuntosVida();
-        combatiente.tomarDano(combatiente);
-    }
-
     public String getNombre() {
         return nombre;
     }

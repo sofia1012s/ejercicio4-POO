@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Explorador extends Jugador {
 
     public Explorador(String nombre, int puntosVida, int poderAtaque, int turno,int items) {

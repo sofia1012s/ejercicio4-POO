@@ -9,13 +9,19 @@ public class simuladorBatallas {
     private ArrayList<Enemigo> enemigos = new ArrayList<Enemigo>();
 
     public void setJugadores(Jugador jugador) {
-        
         jugadores.add(jugador);
     }
 
-    public int inicioBatalla() {
+    public void setEnemigos(Enemigo enemigo) {
+        enemigos.add(enemigo);
+    }
+
+    public int nuevoTurno() {
         turno++;
 
+        if(turno + 1 > jugadores.size() || turno + 1 > enemigos.size()){
+            turno = 0;
+        }
         return turno;
     }
 
@@ -30,4 +36,13 @@ public class simuladorBatallas {
     public int getTurno() {
         return turno;
     }
+
+    public void ataqueJugador(){
+        jugadores.get(turno).atacar(enemigos.get(turno));
+    }
+
+    public void ataqueEnemigo(){
+        enemigos.get(turno).atacar(jugadores.get(turno));
+    }
+
 }
